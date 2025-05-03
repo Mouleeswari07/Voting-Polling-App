@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin Dashboard</title></head>
+<body>
+  <h2>Admin Dashboard</h2>
+  <a href="/admin/add-contestant">Add New Contestant</a> |
+  <a href="/admin/results">View Results</a>
+  <h3>Contestants:</h3>
+  <ul>
+    <% contestants.forEach(c => { %>
+      <li><%= c.name %> - Votes: <%= c.votes %></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
+<a href="/admin/add-contestant">Add New Contestant</a>

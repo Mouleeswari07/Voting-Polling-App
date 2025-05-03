@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Vote</title></head>
+<body>
+  <h2>Cast Your Vote</h2>
+  <% contestants.forEach(c => { %>
+    <div style="margin: 20px;">
+      <a href="/contestant/<%= c._id %>">
+        <img src="<%= c.photo_path %>" width="150" height="150" />
+      </a>
+      <h4><%= c.name %></h4>
+      <form method="POST" action="/vote/<%= c._id %>">
+        <button type="submit">Vote</button>
+      </form>
+    </div>
+  <% }) %>
+</body>
+</html>

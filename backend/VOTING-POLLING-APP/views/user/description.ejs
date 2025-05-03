@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title><%= contestant.name %></title></head>
+<body>
+  <h2><%= contestant.name %></h2>
+  <img src="<%= contestant.photo_path %>" width="200" height="200" /><br />
+  <p><%= contestant.description %></p>
+  <form method="POST" action="/vote/<%= contestant._id %>">
+    <button type="submit">Vote</button>
+  </form>
+  <a href="/vote">Back to Contestants</a>
+</body>
+</html>
